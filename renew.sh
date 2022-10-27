@@ -1,4 +1,4 @@
 #!/bin/bash
 systemctl stop nginx
-certbot renew
+certbot renew --standalone
 systemctl start nginx
