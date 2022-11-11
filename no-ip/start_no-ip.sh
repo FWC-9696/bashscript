@@ -1,3 +1,3 @@
 #!/bin/bash
 echo Trying to start the No-IP client!
-gnome-terminal -- ./no-ip.sh
+gnome-terminal -- /bashscript/no-ip/no-ip.sh

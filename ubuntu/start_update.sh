@@ -1,3 +1,3 @@
 #!/bin/bash
-gnome-terminal -- ./update.sh
+gnome-terminal -- /bashscript/ubuntu/update.sh
 

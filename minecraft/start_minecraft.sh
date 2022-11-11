@@ -1,3 +1,3 @@
 #!/bin/bash
-gnome-terminal -- ./minecraft.sh
+gnome-terminal -- /bashscript/minecraft/minecraft.sh
 
