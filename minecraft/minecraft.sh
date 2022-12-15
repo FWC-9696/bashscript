@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/$USER/Documents/Minecraft
-java -Xms10G -jar server.jar --nogui
+java -Xms2G -Xmx10G -jar server.jar --nogui
