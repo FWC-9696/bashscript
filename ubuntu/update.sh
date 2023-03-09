@@ -2,7 +2,7 @@
 while :
 do 
 DATE=`date '+%F_%H:%M:%S'`
-sudo apt update && sudo apt upgrade -y && sudo sh /chromium/update.sh
+sudo apt update && sudo apt upgrade -y
 echo ""
 echo "***UPDATED ON $DATE***"
 echo ""
