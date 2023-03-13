@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Chromium
+Exec=/bashscript/chromium/update+run.sh
+Comment=Update & Run Chromium
+Terminal=true
+Type=Application
+Icon=/chromium/latest/product_logo_48.png
+
+#copy this to ~/.local/share/applications
