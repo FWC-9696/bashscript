@@ -4,7 +4,7 @@ do
 DATE=`date '+%F_%H:%M:%S'`
 sudo apt update && sudo apt upgrade -y
 echo ""
-canonical-livepatch status
+uname -r
 echo ""
 echo "***UPDATED ON $DATE***"
 echo ""
