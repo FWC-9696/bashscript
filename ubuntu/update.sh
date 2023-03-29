@@ -3,7 +3,7 @@ while :
 do 
 DATE=`date '+%F_%H:%M:%S'`
 sudo apt update && sudo apt upgrade -y
-./version.sh
+../version.sh
 echo ""
 echo "***UPDATED ON $DATE***"
 echo ""
