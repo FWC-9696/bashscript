@@ -1,11 +1,10 @@
 #!/bin/bash
-SCRIPTDIR=$(dirname "$0")
-cd $SCRIPTDIR
+SCRIPTDIR="$(dirname $(readlink -f $0))"
 while :
 do 
 DATE=`date '+%F_%H:%M:%S'`
 sudo apt update && sudo apt upgrade -y
-../version.sh
+$SCRIPTDIR/../version.sh
 echo ""
 if [ -f /var/run/reboot-required ]; then
   echo '***REBOOT REQUIRED***'
