@@ -10,7 +10,7 @@ systemctl stop pleroma
 #Can cause issues importing, see https://gitlab.com/-/snippets/2228488
 
 echo 'Dumping Schema...'
-sudo -Hu postgres pg_dump -s -v pleroma -f $DIR/$DATE/pleroma-schema.pgdump
+sudo -Hu postgres pg_dump -s -v pleroma -f $DIR/$DATE/pleroma-schema.psql
 echo 'Dumping Data...'
 sudo -Hu postgres pg_dump -a -v --disable-triggers pleroma -f $DIR/$DATE/pleroma-data.psql
 
