@@ -4,11 +4,8 @@ DATE=`date '+%F_%H:%M:%S'`
 sudo dnf update -y
 $SCRIPTDIR/../version.sh
 echo ""
-if [ -f /var/run/reboot-required ]; then
-  echo '***REBOOT REQUIRED***'
-fi
+sudo needs-restarting
 echo ""
 echo "***UPDATED ON $DATE***"
-echo ""
 echo ""
 echo "********************************************************************************"
