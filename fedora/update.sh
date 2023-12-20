@@ -2,7 +2,8 @@
 SCRIPTDIR="$(dirname $(readlink -f $0))"
 DATE=`date '+%F_%H:%M:%S'`
 sudo dnf install dnf-utils -y
-sudo dnf update -y
+sudo dnf install dnf-plugin-system-upgrade
+sudo dnf upgrade -y
 echo ""
 echo "ani-cli: "
 sudo ani-cli -U
