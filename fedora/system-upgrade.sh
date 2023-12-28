@@ -36,7 +36,7 @@ sleep 3
 xdg-open https://getfedora.org/security
 echo ""
 echo 'Note: "dnf upgrade --refresh" has alredy been run!'
-#sudo dnf system-upgrade download --releasever=$new_version --allowerasing
+sudo dnf system-upgrade download --releasever=$new_version --allowerasing
 echo ""
 echo 'Rebooting to install the upgrade...'
-#sudo dnf system-upgrade reboot
+sudo dnf system-upgrade reboot
