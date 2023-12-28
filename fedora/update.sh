@@ -5,6 +5,7 @@ sudo dnf install dnf-utils -y
 sudo dnf install dnf-plugin-system-upgrade -y
 sudo dnf install redhat-lsb-core -y --allowerasing
 sudo dnf upgrade -y
+sudo flatpak update -y
 echo ""
 echo "ani-cli: "
 sudo ani-cli -U
