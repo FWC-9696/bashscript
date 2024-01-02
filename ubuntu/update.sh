@@ -4,6 +4,9 @@ while :
 do 
 DATE=`date '+%F_%H:%M:%S'`
 sudo apt update && sudo apt upgrade -y
+echo ""
+flatpak update -y
+echo "" 
 $SCRIPTDIR/../version.sh
 echo ""
 if [ -f /var/run/reboot-required ]; then
