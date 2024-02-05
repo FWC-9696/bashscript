@@ -11,8 +11,9 @@ flatpak update -y
 $SCRIPTDIR/../version.sh
 
 if [ -f /var/run/reboot-required ]; then
-  echo "***REBOOT IS REQUIRED FOR THE FOLLOWING PACKAGES:***"
+  echo "***REBOOT IS REQUIRED FOR THE FOLLOWING PACKAGES***"
   cat /var/run/reboot-required.pkgs
+  echo ""
 fi
 
 echo "***UPDATED ON $DATE***"
