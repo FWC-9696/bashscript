@@ -1,0 +1,9 @@
+[Unit]
+Description=update
+After=network.target
+
+[Service]
+ExecStart=/bashscript/ubuntu/update.sh
+
+[Install]
+WantedBy=multi-user.target

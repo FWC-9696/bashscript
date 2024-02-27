@@ -1,0 +1,44 @@
+https://www.noip.com/support/knowledgebase/running-linux-duc-v3-0-startup-2
+
+Once you have installed the new Linux DUC, you will likely want it to run at startup so that the software is always running. That way, if your IP address changes, the No-IP Dynamic Update Client (DUC) will make sure your hostname is reflecting that new IP address.
+
+This guide assumes you are using a Linux distribution using Systemd. We are using Ubuntu Server here so please note the instructions might vary based on the distro you are using.
+
+While inside the downloaded noip-duc_3.0.0-beta.* folder, copy the debian/service folder over to your systemd directory:
+
+sudo cp debian/service /etc/systemd/system/noip-duc.service
+
+If you installed the No-IP DUC from source, change Line 7 in your /etc/systemd/system/noip-duc.service file to:
+ExecStart=/usr/local/bin/noip-duc
+
+If you installed the No-IP DUC using the package manager, you do NOT need to change this.
+If you want to uninstall the older version of the DUC, version 3.x, follow this guide instead.
+
+Next you will need to create a configuration file for the noip-duc program to read.
+
+Create and edit the file /etc/default/noip-duc using your preferred text editor.
+
+Config File:
+
+## File: /etc/default/noip-duc
+NOIP_USERNAME=
+NOIP_PASSWORD=
+NOIP_HOSTNAMES=
+
+Example Config File:
+
+NOIP_USERNAME=myusername
+NOIP_PASSWORD=mypassword
+NOIP_HOSTNAMES=example.ddns.net,exampledomain.com,noiptest.redirectme.net
+
+Save the file. Next, reload your systemd daemon:
+
+sudo systemctl daemon-reload
+
+Then enable the service:
+
+sudo systemctl enable noip-duc
+
+Finally, start the program:
+
+sudo systemctl start noip-duc
