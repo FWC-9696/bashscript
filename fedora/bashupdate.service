@@ -1,0 +1,9 @@
+[Unit]
+Description=update
+After=network.target
+
+[Service]
+ExecStart=/bashscript/fedora/update.sh
+
+[Install]
+WantedBy=multi-user.target
