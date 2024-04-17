@@ -1,6 +1,6 @@
 #!/bin/bash
 SCRIPTDIR="$(dirname $(readlink -f $0))"
-$SCRIPTDIR/update.sh
+#$SCRIPTDIR/update.sh
 sudo dnf install gnome-software dnf-utils -y
 sudo dnf upgrade --refresh
 #(gnome-software --autoupdate --mode=updates &)
@@ -29,14 +29,15 @@ done
 echo ""
 echo "Installing Fedora $new_version..."
 echo ""
-echo "The GPG Key Webpage Will Now Open." 
+echo "The GPG Key Webpage link is below." 
 echo "Keep this open for later."
 echo ""
 sleep 3
-xdg-open https://getfedora.org/security
+echo "https://getfedora.org/security"
 echo ""
 echo 'Note: "dnf upgrade --refresh" has alredy been run!'
 sudo dnf system-upgrade download --releasever=$new_version --allowerasing
 echo ""
-echo 'Rebooting to install the upgrade...'
+echo 'Any key: reboot to finish the upgrade'
+read continue
 sudo dnf system-upgrade reboot
