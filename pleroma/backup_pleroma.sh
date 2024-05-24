@@ -24,9 +24,9 @@ echo 'Copying config.exs'
 cp -R /etc/pleroma/config.exs $DIR
 echo 'Copying Static Directory'
 cp -R /var/lib/pleroma/static $DIR
-echo 'Copying Uploads'
-cp -R -upv /var/lib/pleroma/uploads $DIR
-echo 'Done'
+#echo 'Copying Uploads'
+#cp -R -upv /var/lib/pleroma/uploads $DIR
+#echo 'Done'
 
 #echo 'Restarting Pleroma'
 #systemctl start pleroma
