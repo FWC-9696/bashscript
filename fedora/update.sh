@@ -8,7 +8,7 @@ sudo dnf install redhat-lsb-core -y --allowerasing
 echo ""
 while :
 do
-DATE=`date '+%F_%H:%M:%S'`
+DATE=`date '+%F %H:%M:%S'`
 sudo dnf upgrade -y
 echo ""
 sudo flatpak update -y

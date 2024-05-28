@@ -3,7 +3,7 @@ SCRIPTDIR="$(dirname $(readlink -f $0))"
 sudo apt install lsb-release -y
 while :
 do
-DATE=`date '+%F_%H:%M:%S'`
+DATE=`date '+%F %H:%M:%S'`
 sudo apt update && sudo apt upgrade -y
 echo ""
 flatpak update -y
