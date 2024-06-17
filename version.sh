@@ -8,3 +8,5 @@ echo ""
 echo -e "Kernel: \t $KERNEL"
 echo -e "Release: \t $FULLNAME"
 echo ""
+uptime -p
+echo ""
