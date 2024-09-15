@@ -19,6 +19,7 @@ while :
 	echo "***UPDATED ON $DATE***"
 	echo ""
 	echo "********************************************************************************"
-	echo "Press any key to check again."
-	read -t 3600
+	#echo "Press any key to check again."
+	#read -t 3600
+	sleep 3600
 done
