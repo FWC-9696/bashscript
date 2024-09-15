@@ -8,20 +8,21 @@ sudo dnf install redhat-lsb-core -y --allowerasing
 echo ""
 while :
 do
-DATE=`date '+%F %H:%M:%S'`
-sudo dnf upgrade -y
-echo ""
-sudo flatpak update -y
-echo ""
-echo "ani-cli: "
-sudo ani-cli -U
-$SCRIPTDIR/../version.sh
-sudo needs-restarting -r
-echo ""
-echo "***UPDATED ON $DATE***"
-echo ""
-echo "********************************************************************************"
-sleep 600
-#read
+	DATE=`date '+%F %H:%M:%S'`
+	sudo dnf upgrade -y
+	echo ""
+	sudo flatpak update -y
+	echo ""
+	echo "ani-cli: "
+	sudo ani-cli -U
+	$SCRIPTDIR/../version.sh
+	sudo needs-restarting -r
+	echo ""
+	echo "***UPDATED ON $DATE***"
+	echo ""
+	echo "********************************************************************************"
+	echo ""
+	echo "Press any key to check again."
+	read -t 3600
 done
 
