@@ -1,0 +1,12 @@
+[Unit]
+Description=mx-puppet-discord
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/bashscript/mx-puppet-discord.sh
+User=root
+
+[Install]
+WantedBy=multi-user.target
