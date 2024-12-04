@@ -1,0 +1,7 @@
+#Useful commands
+pg_lsclusters       #runs in normal terminal. Lists the installed clusters (versions).
+psql                #runs the default postgres. Must be a user with postgres access (sudo -u postgres bash)
+psql -p XXXX        #where XXXX corresponds to the port number from pg_lsclusters. This allows you to look at databases within the specified cluster (version) of postgresql.
+
+#Files
+/var/lib/postgresql/.postgresqlrc           #Contains option to change the DEFAULT cluster (version) for postgresql
