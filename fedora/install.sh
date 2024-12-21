@@ -1,5 +1,5 @@
 #Basic Gnome Apps
-sudo dnf install gnome-system-monitor gnome-weather gnome-screenshot gnome-software blueman system-config-printer qt5ct wmctrl -y --allowerasing
+sudo dnf install gnome-system-monitor gnome-weather gnome-screenshot gnome-software blueman system-config-printer qt5ct wmctrl xdpyinfo -y --allowerasing
 #Multimedia Stuff to make videos play
 sudo dnf group install multimedia 
 sudo dnf install \
