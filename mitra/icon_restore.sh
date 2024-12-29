@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo cp /bashscript/mitra/favicon.ico /usr/share/mitra/www
+sudo cp /bashscript/mitra/favicon.ico /var/lib/mitra/theme
