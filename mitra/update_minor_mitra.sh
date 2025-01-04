@@ -22,20 +22,39 @@ if [ "$latest_version_major" != "$current_version_major" ]; then
 	else echo "OK"
 fi
 
-
 echo ""
 echo "Update Mitra $current_version to Mitra $version? [Any Key to Continue]"
 read continue
 
-#sudo systemctl stop mitra
-#wait
+#Preserve these assets
+sudo cp  /usr/share/mitra/www/assets/startpage-LDuLgnLJ.png /usr/share/mitra/www/ 
 
+#make directory and curl release asset
 mkdir -p /opt/mitra/update
 downloadurl="$release_url/download/$latest_version/mitra_$version"
 downloadurl=$downloadurl"_amd64.deb"
 echo $downloadurl
 curl $downloadurl -o /opt/mitra/update/mitra.deb
 
-#dpkg -i /opt/mitra/update/mitra.deb
-#wait
-#sudo systemctl start mitra
+sudo systemctl stop mitra
+wait
+echo ""
+echo "Mitra is currently..."
+sudo systemctl is-active mitra 
+echo ""
+echo "Enter to install if Mitra is inactive."
+read continue
+
+#dpkg release asset
+dpkg -i /opt/mitra/update/mitra.deb
+wait
+
+#Restore assets
+sudo cp  /usr/share/mitra/www/startpage-LDuLgnLJ.png /usr/share/mitra/www/assets #preserve background image
+
+#restart mitra and restore assets
+sudo systemctl start mitra
+echo ""
+echo "Mitra is currently..."
+sudo systemctl is-active mitra 
+echo ""
