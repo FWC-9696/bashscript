@@ -27,7 +27,9 @@ echo "Update Mitra $current_version to Mitra $version? [Any Key to Continue]"
 read continue
 
 #Preserve these assets
-sudo cp  /usr/share/mitra/www/assets/startpage-LDuLgnLJ.png /usr/share/mitra/www/ 
+sudo cp  /usr/share/mitra/www/assets/startpage-LDuLgnLJ.png /usr/share/mitra/ 
+sudo cp /usr/share/mitra/www/ogp-image.png /usr/share/mitra
+sudo cp /usr/share/mitra/www/favicon.ico /usr/share/mitra
 
 #make directory and curl release asset
 mkdir -p /opt/mitra/update
@@ -50,7 +52,9 @@ dpkg -i /opt/mitra/update/mitra.deb
 wait
 
 #Restore assets
-sudo cp  /usr/share/mitra/www/startpage-LDuLgnLJ.png /usr/share/mitra/www/assets #preserve background image
+sudo cp  /usr/share/mitra/startpage-LDuLgnLJ.png /usr/share/mitra/www/assets #preserve background image
+sudo cp /usr/share/mitra/ogp-image.png /usr/share/mitra/www
+sudo cp /usr/share/mitra/favicon.ico /usr/share/mitra/www
 
 #restart mitra and restore assets
 sudo systemctl start mitra
