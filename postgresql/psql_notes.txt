@@ -1,7 +1,18 @@
-#Useful commands
+#Commands outside psql
 pg_lsclusters       #runs in normal terminal. Lists the installed clusters (versions).
 psql                #runs the default postgres. Must be a user with postgres access (sudo -u postgres bash)
 psql -p XXXX        #where XXXX corresponds to the port number from pg_lsclusters. This allows you to look at databases within the specified cluster (version) of postgresql.
+
+#Commands from within psql
+\l                  #lists the databases once connected to the cluster using psql
+\l+                 #lists the databases within cluster
+
+#Dump and restore
+#Commands are outside of psql interface
+pg_dump -U postgres -p 5432 synapse > /backup/matrix/matrix_dump.sql         #Dump Example for Synapse
+psql -p 5435 -d synapse -f /backup/matrix/matrix_dump.sql                    #Restore Example for Synapse using psql
+https://www.geeksforgeeks.org/how-to-dump-and-restore-postgresql-database/ #link for dump/restore
+https://element-hq.github.io/synapse/latest/postgres.html                  #link for postgres db for synapse setup
 
 #Files
 /var/lib/postgresql/.postgresqlrc           #Contains option to change the DEFAULT cluster (version) for postgresql
