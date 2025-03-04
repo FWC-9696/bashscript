@@ -1,9 +1,12 @@
 
 #Basic Gnome Apps
-sudo dnf install gnome-system-monitor gnome-weather gnome-screenshot gnome-software blueman system-config-printer qt5ct wmctrl xdpyinfo -y --allowerasing
+sudo dnf install gnome-system-monitor gnome-weather gnome-screenshot gnome-software blueman system-config-printer qt5ct wmctrl xdpyinfo android-tools -y --allowerasing
 
 #Ani-Cli Dependencies
 sudo dnf install  grep sed curl mpv iina aria2c yt-dlp ffmpeg fzf patch --skip-unavailable
+git clone "https://github.com/pystardust/ani-cli.git"
+sudo cp ani-cli/ani-cli /usr/local/bin
+rm -rf ani-cli
 
 #Multimedia Stuff to make videos play
 sudo dnf group install multimedia 
