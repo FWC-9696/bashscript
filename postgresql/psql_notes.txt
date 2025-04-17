@@ -7,6 +7,10 @@ psql -p XXXX        #where XXXX corresponds to the port number from pg_lscluster
 \l                  #lists the databases once connected to the cluster using psql
 \l+                 #lists the databases within cluster
 
+SELECT job_data -> 'activity' ->> 'type' FROM background_job WHERE job_type = 2; #Shows which background outgoing jobs are queued
+DELETE FROM background_job WHERE job_type = 2 AND (job_data ->> 'failure_count')::int > 1; #Delete jobs that have been retried at least once
+
+
 #Dump and restore
 #Commands are outside of psql interface
 pg_dump -U postgres -p 5432 synapse > /backup/matrix/matrix_dump.sql         #Dump Example for Synapse
