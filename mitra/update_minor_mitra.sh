@@ -18,7 +18,7 @@ echo "Latest major version is $latest_version_major"
 rm currentv.txt cv.txt latesturl.txt latestv.txt v.txt
 
 if [ "$latest_version_major" != "$current_version_major" ]; then 
-	echo "" & echo "Cannot Upgrade Mitra $current_version to Mitra $version, as major version upgrades may require special steps!" & echo "" & exit
+	echo "" & echo "WARNING: Upgrading Mitra $current_version to Mitra $version, may require special steps! Check notes before continuing!" & echo ""
 	else echo "OK"
 fi
 
