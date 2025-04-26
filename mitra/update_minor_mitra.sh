@@ -1,6 +1,6 @@
 #!/bin/bash
 echo ""
-mitractl --version > currentv.txt 
+mitra --version > currentv.txt 
 $(cat currentv.txt | cut -d " " -f 2 > cv.txt)
 current_version=$(cat cv.txt)
 current_version_major=$(cat cv.txt | cut -d "." -f 1)
