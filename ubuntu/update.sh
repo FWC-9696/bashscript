@@ -8,7 +8,7 @@ while :
 	echo ""
 	flatpak update -y
 	
-	sudo apt remove openssh-client -y
+	#sudo apt remove openssh-client -y
 
 	$SCRIPTDIR/../version.sh
 
