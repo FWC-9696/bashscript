@@ -4,7 +4,7 @@ sudo dnf install dnf-utils -y
 echo ""
 sudo dnf install dnf-plugin-system-upgrade -y
 echo ""
-sudo dnf install redhat-lsb-core -y --allowerasing
+sudo dnf install redhat-lsb -y --allowerasing
 echo ""
 while :
 do
