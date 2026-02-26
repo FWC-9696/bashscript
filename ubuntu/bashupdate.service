@@ -1,5 +1,5 @@
 [Unit]
-Description=update
+Description=bashupdate
 After=network.target
 
 [Service]
