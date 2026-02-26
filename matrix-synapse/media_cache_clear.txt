@@ -1,5 +1,0 @@
-curl \
--X POST \
--H "Authorization: Bearer YOUR_TOKEN_HERE" \
--H "Content-Type: application/json" \
-"https://your.server.fqdn:8448/_synapse/admin/v1/purge_media_cache?before_ts=$(date +%s)000"
