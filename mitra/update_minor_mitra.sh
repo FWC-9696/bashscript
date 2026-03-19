@@ -48,7 +48,7 @@ echo "Enter to install if Mitra is inactive."
 read continue
 
 #dpkg release asset
-dpkg -i /opt/mitra/update/mitra.deb
+sudo dpkg -i /opt/mitra/update/mitra.deb
 wait
 
 #Restore assets
